@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
-import iso3311a2 from 'iso-3166-1-alpha-2'
-
+import React from 'react'
+import Container from './components/Container'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 function App() {
   return (
-    <div>
-     
+    <div className='App'>
+      <Container />
     </div>
   )
 }
