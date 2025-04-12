@@ -1,13 +1,15 @@
-import React, { use, useState } from 'react'
+import React, { useState } from 'react'
 
-function Search({ countries }) {
+function Search({ countries, getInput}) {
     const [inputValue, setInputValue] = useState('')
+
     const handleInput = (e) => {
         setInputValue(e.target.value)
     }
-    
-    const handleKeyDown = (e) => {
-        
+
+    const handleSubmit = () => {
+        getInput(inputValue)
+        setInputValue('')
     }
     return (
         <div>
@@ -20,7 +22,6 @@ function Search({ countries }) {
                             placeholder="Search for a country"
                             list='countries'
                             value={inputValue}
-                            onKeyDown={handleKeyDown}
                         />
                         {inputValue &&
                             <datalist id='countries'>
@@ -30,7 +31,7 @@ function Search({ countries }) {
                                     )
                                 })}
                             </datalist>}
-                        <button className="btn btn-outline-success my-2 my-sm-0">Search</button>
+                        <button onClick={handleSubmit} className="btn btn-outline-success my-2 my-sm-0">Search</button>
                     </div>
                 </form>
             </nav>

@@ -17,33 +17,33 @@ function Display({ codeCountries }) {
                 })
                 setHoliday(eventCountry)
             })
-        }
+    }
 
-        useEffect(() => {
-            searchCountry()
-        },[])
+    useEffect(() => {
+        searchCountry()
+    }, [codeCountries])
     return (
         <div className='display-holiday'>
-          {holiday.map((data) => {
-            return (
-                <div className="card" style={{ width: '10rem', flex: '50%' }}>
-                <div className="card-body">
-                    <div>
-                        <i className="fa-solid fa-globe"></i>
-                        <h4 className="card-title">{data.globalName}</h4>
+            {holiday.map((data) => {
+                return (
+                    <div className="card" key={data.date + data.localName}>
+                        <div className="card-body">
+                            <div>
+                                <i className="fa-solid fa-globe"></i>
+                                <h4 className="card-title">{data.globalName}</h4>
+                            </div>
+                            <div>
+                                <i className="fa-solid fa-calendar"></i>
+                                <p className="card-title">Date: {data.date}</p>
+                            </div>
+                            <div>
+                                <i className="fa-solid fa-location-dot"></i>
+                                <p className="card-text">Local name: {data.localName}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <i className="fa-solid fa-calendar"></i>
-                        <p className="card-title">Date: {data.date}</p>
-                    </div>
-                    <div>
-                        <i className="fa-solid fa-location-dot"></i>
-                        <p className="card-text">Local name: {data.localName}</p>
-                    </div>
-                </div>
-            </div>
-            )
-          })}
+                )
+            })}
         </div>
     )
 }
