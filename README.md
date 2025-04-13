@@ -1,12 +1,54 @@
-# React + Vite
+# 🌍 WorldHolidays
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a lightweight React app that allows users to explore upcoming public holidays for any country around the world. It features a simple interface, fast search, and live data from a public holiday API.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ Search upcoming public holidays by **country name**
+- ✅ Country name suggestions using native `datalist`
+- ✅ Live data from an open API
+- ✅ Simple and clear holiday cards with name and date
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- ⚛️ **React.js**
+- 🪄 **Bootstrap**
+- 🌐 **Public Holiday API** ([date.nager.at](https://date.nager.at/))
+- 🧰 Tools: `Vite`, `iso-3166-1-alpha-2`
+## 📁 Project Structure
+
+WorldHolidays/
+```
+├── src/
+  ├──components
+      ├── Container.jsx
+      ├── Search.jsx
+      ├── Display.jsx
+├── App.css
+├── App.jsx
+├── main.jsx
+```
+
+## 🛠️ Installation
+```bash
+Clone the repository and install dependencies:
+
+git clone https://github.com/Hoang-vn-git/WorldHolidaysApp.git
+cd WorldHolidaysApp
+npm install
+npm run dev
+```
+## 📸 Screenshots
+<img width="1718" alt="Screenshot 2025-04-13 at 00 02 24" src="https://github.com/user-attachments/assets/30d9577b-8df8-44d0-a0df-248d54b0e1d6" />
+<img width="1718" alt="Screenshot 2025-04-13 at 00 02 53" src="https://github.com/user-attachments/assets/bcc00ed7-2d93-4073-8f7d-37d5e0e43755" />
+
+## 🚀 Future Improvements
+
+- Display optimization
+- Search engine optimization
+- Dark theme
+
+## 👤 Author
+Nguyễn Huy Hoàng
+📍 Toronto, Canada
